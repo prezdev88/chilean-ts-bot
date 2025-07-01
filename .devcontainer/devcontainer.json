@@ -1,12 +1,17 @@
 {
 	"name": "chilean-ts-backend",
+	"image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",  
 	"runArgs": [
 		"--env-file", ".devcontainer/.env"
 	],
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
 	"forwardPorts": [8080],
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		}
+	},
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"customizations": {
 		"vscode": {
@@ -40,7 +45,7 @@
 						"icon": "terminal-bash"
 					},
 					"fish": {
-						"path": "fish",
+						"path": "fish"
 					}
 				},
 				"workbench.colorTheme": "IntelliJ Neo Dark",
