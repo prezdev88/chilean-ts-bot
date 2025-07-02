@@ -30,3 +30,4 @@ build/
 !**/src/test/**/build/
 
 .devcontainer/.env
+.vscode/
